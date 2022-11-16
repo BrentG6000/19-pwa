@@ -14,6 +14,7 @@ module.exports = () => {
       install: './src/js/install.js',
       header: './src/js/header.js',
       editor: './src/js/editor.js',
+      database: './src/js/database.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -23,7 +24,7 @@ module.exports = () => {
       // Custom service worker
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'J.A.T.E.'
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -33,9 +34,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Contact Cards',
-        short_name: 'Contact',
-        description: 'Never forget your contacts!',
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E',
+        description: 'text editor app',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
